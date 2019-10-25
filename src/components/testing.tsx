@@ -62,10 +62,11 @@ componentWillMount(){
         // },
         onPanResponderRelease: (e, gestureState) => {
             this.animatedValue.flattenOffset();
-            Animated.decay(this.animatedValue, {
-                deceleration: 0.997,
-                velocity: {x: gestureState.vx, y: gestureState.vy}
-            }).start();
+            // Animated.decay(this.animatedValue, {
+            //     deceleration: 0.997,
+            //     velocity: {x: gestureState.vx, y: gestureState.vy}
+            // }).start();
+            Animated.spring(this.animatedValue, { toValue: {x: 0, y: 0}, speed: 200, bounciness: 20}).start();
         }
     })
 }

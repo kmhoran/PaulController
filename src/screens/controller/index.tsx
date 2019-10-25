@@ -31,8 +31,8 @@ class Controller extends Component<IProps, IState> {
         <View style={[styles.wrapper, styles.row]}>
           <StatusBar hidden />
           <View style={styles.leftPanel}>
-            {/* <ControllerPad /> */}
-            <Test/>
+            <ControllerPad />
+            {/* <Test/> */}
           </View>
           <View style={styles.rightPanel}>
             <ControllerButton
